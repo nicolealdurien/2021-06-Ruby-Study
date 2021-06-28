@@ -1,3 +1,6 @@
+# Lesson 01 - Intro
+# (all lessons from Codecademy's Ruby curriculum)
+
 my_num = 25
 
 my_boolean = true
