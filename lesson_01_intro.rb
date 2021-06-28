@@ -41,3 +41,17 @@ puts "banana".reverse
 
 puts "hush".upcase
 puts "Tiny".downcase
+
+=begin
+if you set these to a variable, you can use the same methods. 
+But they don't change the underlying value of the variable.
+(We learn how to do that in Lesson 2.)
+You can also chain methods together rather than calling them
+each on separate lines.
+=end
+
+name = "Sherlock Holmes"
+
+puts name.upcase
+puts name
+puts name.downcase.reverse
