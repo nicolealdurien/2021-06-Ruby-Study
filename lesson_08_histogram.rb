@@ -28,3 +28,8 @@ frequencies.reverse!
 frequencies.each do |word, count|
     puts word + " " + count.to_s
 end
+
+=begin
+tidbits learned elsewhere...
+.to_i converts to an integer
+=end
