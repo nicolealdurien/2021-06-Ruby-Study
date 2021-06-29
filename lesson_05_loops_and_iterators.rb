@@ -1,3 +1,8 @@
+=begin
+Lesson 05: Loops and Iterators
+(all lessons from Codecademy's Ruby curriculum)
+=end
+
 # UNTIL LOOP: backward while loop
 
 counter = 1
