@@ -17,6 +17,7 @@ my_2d_array.each { |x| puts "#{x}\n"}
 HASH - like a JS object or Python dictionary - collection of key-value pairs
 
 In Ruby syntax, values are assigned to keys using =>. Any Ruby object can be a key or value.
+UPDATE: In Ruby 1.9, this changed to match JS and Python - use colons instead of =>, and the keys become 'symbols', seen later.
 =end
 
 tony_stark_hash = {

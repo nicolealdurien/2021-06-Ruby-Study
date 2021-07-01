@@ -1,5 +1,5 @@
 =begin
-Lesson 08: Histogram
+Lesson 09: Methods, Blocks, and Sorting
 (all lessons from Codecademy's Ruby curriculum)
 =end
 
