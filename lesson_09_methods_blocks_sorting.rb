@@ -37,3 +37,71 @@ end
 
 what_up("What up", "homes")
 what_up("Hello", "Tony", "Bruce", "Aisha")
+
+# BLOCKS - like nameless methods (like JS anon functions or Python lambdas)
+
+1.times do
+    puts "I'm a code block!"
+end
+
+1.times { puts "Me too, me too!" }
+
+# Blocks can't be repeatedly invoked like named methods can.
+
+# method that capitalizes a word
+def capitalize(string) 
+    puts "#{string[0].upcase}#{string[1..-1]}"
+end
+  
+capitalize("tigger") # prints "Ryan"
+capitalize("piglet") # prints "Jane"
+  
+# block that capitalizes each string in the array
+["tigger", "piglet"].each {|string| puts "#{string[0].upcase}#{string[1..-1]}"} 
+
+=begin
+what's with the [1..-1]? Using negative index numbers starts from the end of the array, rather than the beginning. As there’s no negative Zero, Array[-1] will return the final element of the array.
+
+That line is saying, 'return the first element of the string ( string[0] ) as an upper case string, and then return every other element from the second up to and including the final element ( string[1…-1] )
+=end
+
+=begin
+Methods can take a block as a parameter. (That's what .each has been doing this whole time!) This is helpful for abstraction.
+=end
+[1, 2, 3, 4, 5].each do |i| 
+    puts i 
+end
+
+[1, 2, 3, 4, 5].each { |i| puts i*5 }
+
+# SORTING
+
+my_array = [3, 4, 8, 7, 1, 6, 5, 9, 2]
+
+my_array.sort!
+puts my_array
+
+# .sort called on an array of strings will sort it alphabetically. 
+
+=begin
+COMBINED COMPARISON OPERATOR
+- looks like <=>
+- returns 0 if first operand equals the second
+- returns 1 if first operand is greater than the second
+- returns -1 if first operand is less than the second
+=end 
+
+book_1 = "A Wrinkle in Time"
+
+book_2 = "A Brief History of Time"
+
+puts book_1 <=> book_2
+# expect 1 
+
+# .sort does ascending order by default but can take an arg for descending
+
+books = ["Lord of the Rings", "Fahrenheit 451", "1984", "Kushiel's Dart"]
+
+books.sort! { |firstBook, secondBook| secondBook <=> firstBook }
+puts books
+
