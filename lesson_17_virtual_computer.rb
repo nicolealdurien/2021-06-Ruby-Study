@@ -1,5 +1,5 @@
 =begin
-Lesson 16: Object-Oriented Programming I
+Lesson 17: Virtual Computer
 (all lessons from Codecademy's Ruby curriculum)
 =end
 
