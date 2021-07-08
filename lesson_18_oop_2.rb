@@ -35,8 +35,8 @@ We can use attr_reader to access a variable and attr_writer to change it. To mak
 =end
 
 class Person
-    attr_reader :name
-    attr_writer :job
+  attr_reader :name
+  attr_writer :job
   attr_accessor :age
     def initialize(name, job, age)
       @name = name
@@ -85,4 +85,22 @@ acute.cosine
 
 =begin
 MIXINS are how we're able to use Ruby to mimic multiple inheritance; by including multiple modules, we can get any combination of behaviors we want within our classes.
+
+'include' works at the instance level
+'extend' works at the class level - the class itself and not the instances can use the methods
 =end
+
+module Languages
+    FAVE = "Ruby"  
+end
+
+class Master
+  include Languages
+  def initialize; end
+  def victory
+    puts FAVE
+  end
+end
+
+total = Master.new
+total.victory
